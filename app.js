@@ -7,8 +7,8 @@ var express = require('express')
   , path = require('path');
 
 var app = express();
-var server = require('http').createServer(app)
-  , io = require('socket.io').listen(server);
+var server = require('http').createServer(app);
+var io = require('socket.io').listen(server);
 
 // all environments
 app.set('port', process.env.PORT || 3000 );
@@ -34,9 +34,6 @@ app.use(express.logger('dev'));
 
 app.get('/', routes.index);
 
-io.configure(function () { 
-  io.set("polling duration", 10); 
-});
 io.sockets.on('connection', function (socket) {
   socket.broadcast.emit('connected', socket.id );
   socket.on('message', function (data) {

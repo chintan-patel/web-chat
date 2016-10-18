@@ -8,7 +8,7 @@ function send(){
 var msg = $input.val().trim()
     if (msg) {
       socket.emit('message', msg)
-      $messages.prepend('<li><span><b>' + socket.socket.sessionid + '</b></span> ' + msg + '</li>')
+      $messages.prepend('<li><span><b>' + socket.id + '</b></span> ' + msg + '</li>')
     }
     $input.val('')
 }
