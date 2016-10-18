@@ -1,1 +1,1 @@
-web: node --debug nodebootstrap/app.js
+web: node --debug app.js
