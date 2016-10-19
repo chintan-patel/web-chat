@@ -1,0 +1,19 @@
+{
+  "name": "web-chat-chintspassion",
+  "description": "",
+  "main": "",
+  "authors": [
+    "patelchintanm@gmail.com"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/chintan-patel/web-chat",
+  "moduleType": [],
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

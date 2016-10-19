@@ -1,8 +1,17 @@
 body {
-  padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
-
+.messages {
+    padding: 40px 20px;
+	overflow-y: scroll;
+}
+#user-input {
+	position: absolute;
+	bottom: 0px;
+	width: 100%;
+	padding: 20px;
+	background: #efefef;
+}
 a {
   color: #00B7FF;
 }

@@ -8,23 +8,23 @@ function send(){
 var msg = $input.val().trim()
     if (msg) {
       socket.emit('message', msg)
-      $messages.prepend('<li><span><b>' + socket.id + '</b></span> ' + msg + '</li>')
+      $messages.append('<li><span><b>' + socket.id + '</b></span> ' + msg + '</li>')
     }
     $input.val('')
 }
 
 socket.on('message', function(data) {
-    $messages.prepend('<li><span>' + data.id + '</span> ' + data.msg + '</li>')
+    $messages.append('<li><span>' + data.id + '</span> ' + data.msg + '</li>')
 })
 
 socket.on('connected', function(id) {
-    $messages.prepend('<li class="status"><span>Connected</span> ' + id + '</li>')
+    $messages.append('<li class="status"><span>Connected</span> ' + id + '</li>')
   })
 
 //###disconnected
 // Another client has disconnected from the application
 socket.on('disconnected', function(id) {
-	$messages.prepend('<li class="status"><span>Disconnected</span> ' + id + '</li>')
+	$messages.append('<li class="status"><span>Disconnected</span> ' + id + '</li>')
 })
 
 // User interaction

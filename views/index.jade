@@ -2,8 +2,9 @@ extends layout
  
 block content
   div.container
-    p#user-input
-        input#msg(name='msg', size='50')
-        input#submit(name='submit', type='submit', value='Send a Message')
-      
-      ul#messages
+    ul#messages(class="list-unstyled")
+  form#user-input
+    div.form-group
+      input#msg(type="text",class="form-control",placeholder="Type something...", name="msg")
+    div.form-group
+    input#submit(name='submit', type='button', value='Send a Message', class='btn btn-primary')
