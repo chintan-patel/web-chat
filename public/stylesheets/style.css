@@ -15,3 +15,17 @@ body {
 a {
   color: #00B7FF;
 }
+ul {
+	height: 470px;
+	overflow-y: scroll;
+	border: 1px solid #ddd;
+}
+ul li {
+	padding: 10px;
+}
+ul li.myMsg {
+	font-weight: bold;
+}
+ul li.othersMsg {
+		
+}
